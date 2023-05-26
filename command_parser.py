@@ -37,16 +37,18 @@ def turn_left(data):
     
     motorL = Motor(Port.B)
     motorR = Motor(Port.C)
-    motorL.run(-500)
-    motorR.run(500)
+    motorL.run(500)
+    motorR.run(-500)
 
 def turn_right(data):
     print("Right")
     
     motorL = Motor(Port.B)
     motorR = Motor(Port.C)
-    motorL.run(500)
-    motorR.run(-500)
+    motorL.run(-500)
+    motorR.run(500)
+
+
 
 
 def stop(data):
@@ -54,12 +56,12 @@ def stop(data):
     
     motorL = Motor(Port.B)
     motorR = Motor(Port.C)
-    motorL.stop()
-    motorR.stop()
+    motorL.brake()
+    motorR.brake()
 
 
 def unknown_command(data):
     print("UNKNOWN COMMAND:" + data)
     ev3.screen.print(data)
-    #ev3.speaker.say(data)
+    ev3.speaker.say(data)
 

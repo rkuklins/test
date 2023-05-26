@@ -18,7 +18,7 @@ def top_left_channel(state):
 
 #iSensor = InfraredSensor(Port.S1);
 print("Initialize EV3")
-#ev3.speaker.beep()
+ev3.speaker.beep()
 
 #Start server to listen to commands
 server_program()
